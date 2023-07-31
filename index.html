@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix media carousel CSS only</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="container flow">
+      <h1 class="page-title">An amazing movie!</h1>
+      <p class="page-subtitle">A description of the amazing movie that we think you'd really like to watch right now</p>
+    </div>
+  </header>
+
+  <h4 class="section-title"><span>Prime</span> Amazon Originals and Exclusives</h4>
+
+<div class="Carousel">
+    <div class="slick-list" id="slick-list">
+        <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton1(event)">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+        </button>
+        <div class="slick-track" id="gal">
+         <div class="gallery" id="gallery">
+
+         </div>
+        </div>
+        <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton1(event)">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+        </button>
+    </div>
+</div>
+
+
+  <!-- <div class="media-container">
+    <div class="media-scroller">-->
+
+      <!--   Group 1 -->
+      <!-- <div class="media-group" id="group-1">
+        <div class="gallery">
+        <article class="card">
+          <figure>
+              <img
+                  src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+                  alt="Preview"
+                  title="Preview"
+              />
+              <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+          </figure>
+      </article>
+      <article class="card">
+        <figure>
+            <img
+                src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+                alt="Preview"
+                title="Preview"
+            />
+            <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+        </figure>
+    </article>
+    <article class="card">
+      <figure>
+          <img
+              src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+              alt="Preview"
+              title="Preview"
+          />
+          <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+      </figure>
+  </article>
+  <article class="card">
+    <figure>
+        <img
+            src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+            alt="Preview"
+            title="Preview"
+        />
+        <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+    </figure>
+</article>
+
+
+
+</div>
+        <a class="next" href="#group-2" aria-label="next">
+          <svg>
+            <use href="#next">></use>
+          </svg>
+        </a>
+      </div> -->
+
+      <!-- Group 2   -->
+      <!-- <div class="media-group" id="group-2">
+        <a class="previous" href="#group-1">
+          <svg>
+            <use href="#previous"></use>
+          </svg>
+        </a>
+        <div class="gallery">
+        <article class="card">
+          <figure>
+              <img
+                  src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+                  alt="Preview"
+                  title="Preview"
+              />
+              <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+          </figure>
+      </article>
+      <article class="card">
+        <figure>
+            <img
+                src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+                alt="Preview"
+                title="Preview"
+            />
+            <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+        </figure>
+    </article>
+    <article class="card">
+      <figure>
+          <img
+              src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+              alt="Preview"
+              title="Preview"
+          />
+          <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+      </figure>
+  </article>
+  <article class="card">
+    <figure>
+        <img
+            src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+            alt="Preview"
+            title="Preview"
+        />
+        <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+    </figure>
+</article>
+
+</div>
+        <a class="next" href="#group-3" aria-label="next">
+          <svg>
+            <use href="#next"></use>
+          </svg>
+        </a>
+      </div> -->
+
+      <!-- Group 3   -->
+      <!-- <div class="media-group" id="group-3">
+        <a class="previous" href="#group-2">
+          <svg>
+            <use href="#previous"></use>
+          </svg>
+        </a>
+        <div class="gallery">
+          <article class="card">
+            <figure>
+                <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+                    alt="Preview"
+                    title="Preview"
+                />
+                <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+            </figure>
+        </article>
+        <article class="card">
+          <figure>
+              <img
+                  src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+                  alt="Preview"
+                  title="Preview"
+              />
+              <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+          </figure>
+      </article>
+      <article class="card">
+        <figure>
+            <img
+                src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+                alt="Preview"
+                title="Preview"
+            />
+            <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+        </figure>
+    </article>
+    <article class="card">
+      <figure>
+          <img
+              src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+              alt="Preview"
+              title="Preview"
+          />
+          <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+      </figure>
+  </article>
+        </div>
+        <a class="next" href="#group-4" aria-label="next">
+          <svg>
+            <use href="#next"></use>
+          </svg>
+        </a>
+      </div> -->
+
+      <!--  Group 4  -->
+      <!-- <div class="media-group" id="group-4">
+        <a class="previous" href="#group-3">
+          <svg>
+            <use href="#previous"></use>
+          </svg>
+        </a>
+        <div class="gallery">
+          <article class="card">
+            <figure>
+                <img
+                    src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+                    alt="Preview"
+                    title="Preview"
+                />
+                <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+            </figure>
+        </article>
+        <article class="card">
+          <figure>
+              <img
+                  src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+                  alt="Preview"
+                  title="Preview"
+              />
+              <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+          </figure>
+      </article>
+      <article class="card">
+        <figure>
+            <img
+                src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+                alt="Preview"
+                title="Preview"
+            />
+            <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+        </figure>
+    </article>
+    <article class="card">
+      <figure>
+          <img
+              src="https://m.media-amazon.com/images/S/pv-target-images/6a179ae1e62ecc687d9281782064d2479ddfe556afc91d6a83db1ec5f3d5ec18._UR2000,3000_SX375_FMwebp_.jpg"
+              alt="Preview"
+              title="Preview"
+          />
+          <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/06/prime-video-gives-a-sneak-peak-into-the-quirky-world-of-nawazuddin-siddiqui-and-avneet-kaur-starrer-tiku-weds-sheru.jpg" class="img-top" alt="">
+      </figure>
+  </article>
+        </div>
+      </div> -->
+
+      <!-- <div class="navigation-indicators">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+    </div>
+  </div> -->
+  <!-- <svg>
+    <symbol id="next" viewBox="0 0 256 512">
+      <path fill="white"
+        d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+    </symbol>
+
+    <symbol id="previous" viewBox="0 0 256 512">
+      <path fill="white"
+        d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+    </symbol>
+  </svg> -->
+
+  <h4 class="section-title"><span>Prime</span> Amazon Originals and Exclusives</h4>
+  <div class="Carousel">
+    <div class="slick-list" id="slick-list">
+        <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+        </button>
+        <div class="slick-track" id="track">
+         
+        </div>
+        <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+        </button>
+    </div>
+</div>
+<section>
+  <h4 class="section-title"><span>Prime</span> Popular Movies</h4>
+
+  <div class="wrapper">
+		
+	</div>
+</section>
+<footer>
+  <div class="footer-content">
+    <h3>Foolish Developer</h3>
+    <p>Foolish Developer —  source code.</p>
+    <ul class="socials">
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+      <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+   </ul>
+   
+</div>
+<div class="footer-bottom">
+  <p>copyright &copy;2021 <a href="#">foolishdeveloper</a>  </p>
+</div>
+
+</footer>
+</body>
+<script src="script.js"></script>
+</html>
